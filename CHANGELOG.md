@@ -9,3 +9,7 @@ fix documentation
 ## 0.0.3
 
 fix platform
+
+## 0.0.4
+
+fix repository & documentation

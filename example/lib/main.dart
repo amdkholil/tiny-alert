@@ -104,7 +104,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 TinyAlert.confirm(
                   context,
-                  title: "Confrimation!",
+                  title: "Confrimation?",
                   message: "This is a confirmation message!",
                   onConfirm: () {
                     Navigator.pop(context);

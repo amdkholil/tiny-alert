@@ -31,14 +31,16 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/success.png", package: "tiny_alert"),
+                image: const AssetImage("lib/assets/success.png",
+                    package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -92,14 +94,16 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/info.png", package: "tiny_alert"),
+                image: const AssetImage("lib/assets/info.png",
+                    package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -154,14 +158,16 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/confirm.png", package: "tiny_alert"),
+                image: const AssetImage("lib/assets/confirm.png",
+                    package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -221,14 +227,16 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/warning.png", package: "tiny_alert"),
+                image: const AssetImage("lib/assets/warning.png",
+                    package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -282,14 +290,16 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/error.png", package: "tiny_alert"),
+                image: const AssetImage("lib/assets/error.png",
+                    package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -336,13 +346,18 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               if (type == TinyAlertLoadingType.linear)
-                SizedBox(width: 150, child: LinearProgressIndicator(value: progress))
+                SizedBox(
+                    width: 150, child: LinearProgressIndicator(value: progress))
               else
-                SizedBox(height: 50, width: 50, child: CircularProgressIndicator(value: progress)),
+                SizedBox(
+                    height: 50,
+                    width: 50,
+                    child: CircularProgressIndicator(value: progress)),
               const SizedBox(height: 8),
               Text(
                 label,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ],
           ),
@@ -351,7 +366,8 @@ class TinyAlert {
     );
   }
 
-  static snackbar(BuildContext context, String message, {bool? showCloseIcon, int? seconds}) {
+  static snackbar(BuildContext context, String message,
+      {bool? showCloseIcon, int? seconds}) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         behavior: SnackBarBehavior.floating,

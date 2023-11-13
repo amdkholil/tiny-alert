@@ -70,6 +70,7 @@ TinyAlert.confirm(
         Navigator.pop(context);
     },
 );
+// also available onCancale function
 ```
 
 - ### Loading
@@ -77,7 +78,7 @@ TinyAlert.confirm(
 TinyAlert.progress(context, 
     label: "Loading...", 
     barrierDismissible: true,
-);
+); // barrierDismissible is optional, the default is false
 ```
 
 - ### Snackbar
