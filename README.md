@@ -1,4 +1,4 @@
-# tiny_alert
+# tiny_alert (flutter package)
 
 Just simple alert in tiny size for simple UI.
 
