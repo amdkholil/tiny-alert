@@ -1,6 +1,6 @@
 name: tiny_alert
 description: Simple Flutter Alert.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/amdkholil/tiny_alert
 
 environment:
