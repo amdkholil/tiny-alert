@@ -1,0 +1,6 @@
+package com.amdkholil.tiny_alert_example
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
