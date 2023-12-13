@@ -23,3 +23,7 @@ fix repository & documentation
 
  - upgrade package
  - add backgorund color (default white for dialog & black for snackbar )
+
+## 1.1.0
+
+ - fix border radius

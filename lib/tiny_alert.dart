@@ -23,6 +23,7 @@ class TinyAlert {
     double iconSize = 80,
     double maxWidth = 400,
     Color backgroundColor = Colors.white,
+    BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
     maxWidth = size.width > maxWidth ? maxWidth : size.width;
@@ -34,7 +35,10 @@ class TinyAlert {
         child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
           width: maxWidth,
-          color: backgroundColor,
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: borderRadius,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
@@ -93,6 +97,7 @@ class TinyAlert {
     double iconSize = 80,
     double maxWidth = 400,
     Color backgroundColor = Colors.white,
+    BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
     maxWidth = size.width > maxWidth ? maxWidth : size.width;
@@ -104,7 +109,10 @@ class TinyAlert {
         child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
           width: maxWidth,
-          color: backgroundColor,
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: borderRadius,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
@@ -164,6 +172,7 @@ class TinyAlert {
     double iconSize = 80,
     double maxWidth = 400,
     Color backgroundColor = Colors.white,
+    BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
     maxWidth = size.width > maxWidth ? maxWidth : size.width;
@@ -175,7 +184,10 @@ class TinyAlert {
         child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
           width: maxWidth,
-          color: backgroundColor,
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: borderRadius,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
@@ -240,6 +252,7 @@ class TinyAlert {
     double iconSize = 80,
     double maxWidth = 400,
     Color backgroundColor = Colors.white,
+    BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
     maxWidth = size.width > maxWidth ? maxWidth : size.width;
@@ -251,7 +264,10 @@ class TinyAlert {
         child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
           width: maxWidth,
-          color: backgroundColor,
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: borderRadius,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
@@ -310,6 +326,7 @@ class TinyAlert {
     double iconSize = 80,
     double maxWidth = 400,
     Color backgroundColor = Colors.white,
+    BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
     maxWidth = size.width > maxWidth ? maxWidth : size.width;
@@ -321,7 +338,10 @@ class TinyAlert {
         child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
           width: maxWidth,
-          color: backgroundColor,
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: borderRadius,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
@@ -374,6 +394,7 @@ class TinyAlert {
     TinyAlertLoadingType type = TinyAlertLoadingType.circular,
     double maxWidth = 400,
     Color backgroundColor = Colors.white,
+    BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
     maxWidth = size.width > maxWidth ? maxWidth : size.width;
@@ -384,7 +405,10 @@ class TinyAlert {
         child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
           width: maxWidth,
-          color: backgroundColor,
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: borderRadius,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
