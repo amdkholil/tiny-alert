@@ -3,6 +3,7 @@
 Just simple alert in tiny size for simple UI.
 
 <img src="https://raw.githubusercontent.com/amdkholil/tiny-alert/main/tiny_alert.gif" width="300">
+<img src="https://raw.githubusercontent.com/amdkholil/tiny-alert/main/tiny_alert2.gif" width="300">
 
 ## Getting Started
 

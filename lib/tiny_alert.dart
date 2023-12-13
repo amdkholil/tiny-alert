@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
+/// Loading type
 enum TinyAlertLoadingType {
   circular,
   linear,
 }
 
+/// Tiny Alert
 class TinyAlert {
+  /// Show a success message
   static void success(
     BuildContext context, {
     required String title,
@@ -17,30 +20,32 @@ class TinyAlert {
     String cancelButtonText = "Cancel",
     VoidCallback? onCancel,
     bool barrierDismissible = true,
-    double iconSize = 100,
+    double iconSize = 80,
+    double maxWidth = 400,
   }) {
+    Size size = MediaQuery.of(context).size;
+    maxWidth = size.width > maxWidth ? maxWidth : size.width;
     showDialog(
       barrierDismissible: barrierDismissible,
       useSafeArea: true,
       context: context,
       builder: (ctx) => Dialog(
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
+          width: maxWidth,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/success.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/success.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -69,6 +74,7 @@ class TinyAlert {
     );
   }
 
+  /// Show an info message
   static void info(
     BuildContext context, {
     required String title,
@@ -80,30 +86,32 @@ class TinyAlert {
     String cancelButtonText = "Cancel",
     VoidCallback? onCancel,
     bool barrierDismissible = true,
-    double iconSize = 100,
+    double iconSize = 80,
+    double maxWidth = 400,
   }) {
+    Size size = MediaQuery.of(context).size;
+    maxWidth = size.width > maxWidth ? maxWidth : size.width;
     showDialog(
       barrierDismissible: barrierDismissible,
       useSafeArea: true,
       context: context,
       builder: (ctx) => Dialog(
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
+          width: maxWidth,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/info.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/info.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -132,6 +140,7 @@ class TinyAlert {
     );
   }
 
+  /// Show a confirmation message
   static void confirm(
     BuildContext context, {
     required String title,
@@ -144,30 +153,32 @@ class TinyAlert {
     String cancelButtonText = "Cancel",
     VoidCallback? onCancel,
     bool barrierDismissible = true,
-    double iconSize = 100,
+    double iconSize = 80,
+    double maxWidth = 400,
   }) {
+    Size size = MediaQuery.of(context).size;
+    maxWidth = size.width > maxWidth ? maxWidth : size.width;
     showDialog(
       barrierDismissible: barrierDismissible,
       useSafeArea: true,
       context: context,
       builder: (ctx) => Dialog(
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
+          width: maxWidth,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/confirm.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/confirm.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -188,8 +199,7 @@ class TinyAlert {
                     child: Text(
                       confirmButtonText,
                       style: TextStyle(
-                        color: confirmButtonColor ??
-                            Theme.of(context).buttonTheme.colorScheme!.primary,
+                        color: confirmButtonColor ?? Theme.of(context).buttonTheme.colorScheme!.primary,
                       ),
                     ),
                   ),
@@ -202,6 +212,7 @@ class TinyAlert {
     );
   }
 
+  /// Show a warning message
   static void warning(
     BuildContext context, {
     required String title,
@@ -213,30 +224,32 @@ class TinyAlert {
     String cancelButtonText = "Cancel",
     VoidCallback? onCancel,
     bool barrierDismissible = true,
-    double iconSize = 100,
+    double iconSize = 80,
+    double maxWidth = 400,
   }) {
+    Size size = MediaQuery.of(context).size;
+    maxWidth = size.width > maxWidth ? maxWidth : size.width;
     showDialog(
       barrierDismissible: barrierDismissible,
       useSafeArea: true,
       context: context,
       builder: (ctx) => Dialog(
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
+          width: maxWidth,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/warning.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/warning.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -265,6 +278,7 @@ class TinyAlert {
     );
   }
 
+  /// Show an error message
   static void error(
     BuildContext context, {
     required String title,
@@ -276,30 +290,32 @@ class TinyAlert {
     String cancelButtonText = "Cancel",
     VoidCallback? onCancel,
     bool barrierDismissible = true,
-    double iconSize = 100,
+    double iconSize = 80,
+    double maxWidth = 400,
   }) {
+    Size size = MediaQuery.of(context).size;
+    maxWidth = size.width > maxWidth ? maxWidth : size.width;
     showDialog(
       barrierDismissible: barrierDismissible,
       useSafeArea: true,
       context: context,
       builder: (ctx) => Dialog(
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
+          width: maxWidth,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/error.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/error.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -328,37 +344,38 @@ class TinyAlert {
     );
   }
 
+  /// Show a loading
   static void progress(
     BuildContext context, {
-    required String label,
+    String? label,
     double? progress,
     bool barrierDismissible = false,
     TinyAlertLoadingType type = TinyAlertLoadingType.circular,
+    double maxWidth = 400,
   }) {
+    Size size = MediaQuery.of(context).size;
+    maxWidth = size.width > maxWidth ? maxWidth : size.width;
     showDialog(
       context: context,
       barrierDismissible: barrierDismissible,
       builder: (ctx) => Dialog(
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
+          width: maxWidth,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               if (type == TinyAlertLoadingType.linear)
-                SizedBox(
-                    width: 150, child: LinearProgressIndicator(value: progress))
+                SizedBox(width: 150, child: LinearProgressIndicator(value: progress))
               else
-                SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: CircularProgressIndicator(value: progress)),
+                SizedBox(height: 50, width: 50, child: CircularProgressIndicator(value: progress)),
               const SizedBox(height: 8),
-              Text(
-                label,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
+              if (label != null)
+                Text(
+                  label,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
             ],
           ),
         ),
@@ -366,8 +383,16 @@ class TinyAlert {
     );
   }
 
-  static snackbar(BuildContext context, String message,
-      {bool? showCloseIcon, int? seconds}) {
+  /// Show a snackbar
+  static snackbar(
+    BuildContext context,
+    String message, {
+    bool? showCloseIcon,
+    int? seconds,
+    TextStyle? textStyle,
+    int maxLines = 2,
+    TextAlign textAlign = TextAlign.center,
+  }) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         behavior: SnackBarBehavior.floating,
@@ -376,7 +401,9 @@ class TinyAlert {
         elevation: 0,
         content: Text(
           message,
-          textAlign: TextAlign.center,
+          textAlign: textAlign,
+          maxLines: maxLines,
+          style: textStyle,
         ),
         showCloseIcon: showCloseIcon ?? true,
         closeIconColor: Colors.white,

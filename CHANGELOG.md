@@ -13,3 +13,8 @@ fix platform
 ## 0.0.4
 
 fix repository & documentation
+
+## 0.0.5
+
+ - add max width param to dialog
+ - add max line & text style param to snackbar
