@@ -1,6 +1,6 @@
 name: tiny_alert
-description: Simple Flutter Alert with a simple design for fast coding.
-version: 0.0.4
+description: Simple Flutter Alert Dialog Widget with a simple design for fast coding, easy to use, and easy to customize.
+version: 0.0.5
 homepage: https://github.com/amdkholil/tiny-alert
 repository: https://github.com/amdkholil/tiny-alert.git
 
