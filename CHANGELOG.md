@@ -18,3 +18,8 @@ fix repository & documentation
 
  - add max width param to dialog
  - add max line & text style param to snackbar
+
+## 1.0.0
+
+ - upgrade package
+ - add backgorund color (default white for dialog & black for snackbar )

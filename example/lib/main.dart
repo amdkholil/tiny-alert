@@ -119,7 +119,8 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                TinyAlert.progress(context, label: "Loading...", barrierDismissible: true);
+                TinyAlert.progress(context,
+                    label: "Loading...", barrierDismissible: true);
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
