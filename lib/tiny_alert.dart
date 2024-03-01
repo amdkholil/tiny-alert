@@ -22,7 +22,7 @@ class TinyAlert {
     bool barrierDismissible = true,
     double iconSize = 80,
     double maxWidth = 400,
-    Color backgroundColor = Colors.white,
+    Color? backgroundColor,
     BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
@@ -44,16 +44,17 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/success.png",
-                    package: "tiny_alert"),
+                image: const AssetImage(
+                  "lib/assets/success.png",
+                  package: "tiny_alert",
+                ),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -96,7 +97,7 @@ class TinyAlert {
     bool barrierDismissible = true,
     double iconSize = 80,
     double maxWidth = 400,
-    Color backgroundColor = Colors.white,
+    Color? backgroundColor,
     BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
@@ -118,16 +119,14 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/info.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/info.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -171,7 +170,7 @@ class TinyAlert {
     bool barrierDismissible = true,
     double iconSize = 80,
     double maxWidth = 400,
-    Color backgroundColor = Colors.white,
+    Color? backgroundColor,
     BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
@@ -193,16 +192,14 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/confirm.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/confirm.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -223,8 +220,7 @@ class TinyAlert {
                     child: Text(
                       confirmButtonText,
                       style: TextStyle(
-                        color: confirmButtonColor ??
-                            Theme.of(context).buttonTheme.colorScheme!.primary,
+                        color: confirmButtonColor ?? Theme.of(context).buttonTheme.colorScheme!.primary,
                       ),
                     ),
                   ),
@@ -251,7 +247,7 @@ class TinyAlert {
     bool barrierDismissible = true,
     double iconSize = 80,
     double maxWidth = 400,
-    Color backgroundColor = Colors.white,
+    Color? backgroundColor,
     BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
@@ -273,16 +269,14 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/warning.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/warning.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -325,7 +319,7 @@ class TinyAlert {
     bool barrierDismissible = true,
     double iconSize = 80,
     double maxWidth = 400,
-    Color backgroundColor = Colors.white,
+    Color? backgroundColor,
     BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
@@ -347,16 +341,14 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                image: const AssetImage("lib/assets/error.png",
-                    package: "tiny_alert"),
+                image: const AssetImage("lib/assets/error.png", package: "tiny_alert"),
                 width: iconSize,
                 height: iconSize,
               ),
               const SizedBox(height: 8),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               const SizedBox(height: 6),
               Text(
@@ -393,7 +385,7 @@ class TinyAlert {
     bool barrierDismissible = false,
     TinyAlertLoadingType type = TinyAlertLoadingType.circular,
     double maxWidth = 400,
-    Color backgroundColor = Colors.white,
+    Color? backgroundColor,
     BorderRadius borderRadius = const BorderRadius.all(Radius.circular(20)),
   }) {
     Size size = MediaQuery.of(context).size;
@@ -414,19 +406,14 @@ class TinyAlert {
             mainAxisSize: MainAxisSize.min,
             children: [
               if (type == TinyAlertLoadingType.linear)
-                SizedBox(
-                    width: 150, child: LinearProgressIndicator(value: progress))
+                SizedBox(width: 150, child: LinearProgressIndicator(value: progress))
               else
-                SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: CircularProgressIndicator(value: progress)),
+                SizedBox(height: 50, width: 50, child: CircularProgressIndicator(value: progress)),
               const SizedBox(height: 8),
               if (label != null)
                 Text(
                   label,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 16),
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
             ],
           ),
@@ -444,8 +431,8 @@ class TinyAlert {
     TextStyle? textStyle,
     int maxLines = 2,
     TextAlign textAlign = TextAlign.center,
-    Color backgroundColor = Colors.black87,
-    Color closeIconColor = Colors.white,
+    Color? backgroundColor,
+    Color? closeIconColor,
   }) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(

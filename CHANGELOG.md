@@ -27,3 +27,7 @@ fix repository & documentation
 ## 1.1.0
 
  - fix border radius
+
+## 1.1.1
+
+ - fix default text color
