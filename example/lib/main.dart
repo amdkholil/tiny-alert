@@ -20,8 +20,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      darkTheme: ThemeData.dark(useMaterial3: true),
+      home: const HomePage(),
     );
   }
 }
@@ -49,7 +50,8 @@ class HomePage extends StatelessWidget {
                 TinyAlert.success(
                   context,
                   title: "Success!",
-                  message: "This is a success message!",
+                  message:
+                      "This is a success message! \nAute nostrud Lorem pariatur aliqua ut reprehenderit esse reprehenderit aliqua officia pariatur dolore aliqua cupidatat.",
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -119,8 +121,7 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                TinyAlert.progress(context,
-                    label: "Loading...", barrierDismissible: true);
+                TinyAlert.progress(context, label: "Loading...", barrierDismissible: true);
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
